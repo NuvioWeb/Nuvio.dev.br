@@ -17,6 +17,4 @@ export default [
   route("politica-de-privacidade", "routes/politica-de-privacidade.tsx"),
   route("politica-de-cookies", "routes/politica-de-cookies.tsx"),
   route("termos-de-uso", "routes/termos-de-uso.tsx"),
-  route("robots.txt", "routes/robots[.]txt.ts"),
-  route("sitemap.xml", "routes/sitemap[.]xml.ts"),
 ] satisfies RouteConfig;

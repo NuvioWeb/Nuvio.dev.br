@@ -27,7 +27,5 @@ export default {
     "/politica-de-privacidade",
     "/politica-de-cookies",
     "/termos-de-uso",
-    "/robots.txt",
-    "/sitemap.xml",
   ],
 } satisfies Config;

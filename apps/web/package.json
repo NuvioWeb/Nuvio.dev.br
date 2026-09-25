@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "build": "react-router build",
+    "build": "node ./scripts/generate-seo-files.mjs && react-router build",
+    "seo:generate": "node ./scripts/generate-seo-files.mjs",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc --noEmit",
     "lint": "node -e \"console.log('lint web: ok placeholder')\"",
