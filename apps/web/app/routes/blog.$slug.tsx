@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { AppLink } from "~/components/ui/app-link";
 import type { Route } from "./+types/blog.$slug";
 import { Container, Section } from "~/components/layout/section";
@@ -63,13 +64,20 @@ export default function BlogPostPage({ params }: Route.ComponentProps) {
         ]}
       />
       <Section>
-        <Container className="max-w-3xl">
+        <Container className="relative max-w-3xl">
+          <AppLink
+            to="/blog"
+            aria-label="Fechar e voltar à listagem do blog"
+            className="absolute right-2 top-2 z-10 inline-flex size-10 items-center justify-center rounded-xl border border-white/15 bg-[var(--nuvio-ink)]/80 text-white shadow-sm backdrop-blur-sm transition-colors hover:border-[var(--nuvio-gold)]/50 hover:bg-[var(--nuvio-ink)] hover:text-[var(--nuvio-gold)] sm:right-3 sm:top-3"
+          >
+            <X className="size-5" aria-hidden />
+          </AppLink>
           <div className="calendar-board">
             <div className="calendar-plate px-6 py-6 sm:px-10">
               <p className="text-sm text-white/60">
                 {post.publishedAt} · {post.author}
               </p>
-              <h1 className="mt-3 text-3xl text-white sm:text-4xl">
+              <h1 className="mt-3 pr-10 text-3xl text-white sm:text-4xl">
                 {post.title}
               </h1>
             </div>
