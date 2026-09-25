@@ -5,7 +5,9 @@ import { getSiteUrl } from "~/lib/env";
 
 export function loader({}: Route.LoaderArgs) {
   const base = getSiteUrl();
-  const paths = [
+  const today = new Date().toISOString().slice(0, 10);
+
+  const staticPaths = [
     "/",
     "/servicos",
     "/processo",
@@ -21,15 +23,26 @@ export function loader({}: Route.LoaderArgs) {
           ...getPublishedPortfolio().map((p) => `/portfolio/${p.slug}`),
         ]
       : []),
-    ...blogPosts
-      .filter((p) => p.status === "published")
-      .map((p) => `/blog/${p.slug}`),
   ];
 
-  const urls = paths
+  const entries = [
+    ...staticPaths.map((path) => ({
+      loc: `${base}${path === "/" ? "" : path}`,
+      lastmod: today,
+    })),
+    ...blogPosts
+      .filter((p) => p.status === "published")
+      .map((p) => ({
+        loc: `${base}/blog/${p.slug}`,
+        lastmod: p.updatedAt || p.publishedAt,
+      })),
+  ];
+
+  const urls = entries
     .map(
-      (path) => `  <url>
-    <loc>${base}${path === "/" ? "" : path}</loc>
+      (entry) => `  <url>
+    <loc>${entry.loc}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
   </url>`,
     )
     .join("\n");
@@ -37,7 +50,8 @@ export function loader({}: Route.LoaderArgs) {
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
-</urlset>`;
+</urlset>
+`;
 
   return new Response(body, {
     headers: {
