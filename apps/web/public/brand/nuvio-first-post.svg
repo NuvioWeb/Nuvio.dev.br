@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">Primeiro post da Nuvio - identidade Mosaico</title>
+  <desc id="desc">Post de apresentação da Nuvio com o novo símbolo Mosaico.</desc>
+  <defs>
+    <linearGradient id="mosaicA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4B942"/><stop offset="1" stop-color="#F4B942"/></linearGradient>
+    <linearGradient id="mosaicB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4B942"/><stop offset="1" stop-color="#F4B942"/></linearGradient>
+    <radialGradient id="halo" cx="50%" cy="32%" r="70%"><stop offset="0" stop-color="#334155" stop-opacity=".72"/><stop offset=".60" stop-color="#334155" stop-opacity=".18"/><stop offset="1" stop-color="#1E293B" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="#1E293B"/>
+  <rect width="1080" height="850" fill="url(#halo)"/>
+  <circle cx="940" cy="180" r="175" fill="#F4B942" opacity=".12"/>
+  <circle cx="940" cy="180" r="88" fill="#F4B942" opacity=".10"/>
+  <g transform="translate(78 70) scale(.54)">
+    <rect x="0" y="0" width="82" height="82" rx="20" fill="url(#mosaicA)"/><rect x="98" y="0" width="82" height="82" rx="20" fill="#334155" stroke="#F4B942" stroke-width="5"/><rect x="0" y="98" width="82" height="82" rx="20" fill="#334155" stroke="#F4B942" stroke-width="5"/><rect x="98" y="98" width="82" height="82" rx="20" fill="url(#mosaicB)"/><path d="M41 41h98v98H41Z" fill="#1E293B" transform="rotate(45 90 90)"/>
+  </g>
+  <text x="205" y="138" fill="#FFFFFF" font-family="Manrope,Arial,sans-serif" font-size="52" font-weight="800" letter-spacing="-2">nuvio</text>
+  <rect x="78" y="260" width="255" height="52" rx="26" fill="#334155" stroke="#F4B942" stroke-opacity=".40"/>
+  <text x="205" y="294" fill="#F4B942" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="1.8">BEM-VINDO À NUVIO</text>
+  <text x="78" y="452" fill="#FFFFFF" font-family="Manrope,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-3">Sua presença</text>
+  <text x="78" y="548" fill="#FFFFFF" font-family="Manrope,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-3">digital começa</text>
+  <text x="78" y="644" fill="url(#mosaicA)" font-family="Manrope,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-3">aqui.</text>
+  <text x="78" y="758" fill="#F4B942" font-family="DM Sans,Arial,sans-serif" font-size="30"><tspan x="78">Sites estratégicos e experiências digitais</tspan><tspan x="78" dy="45">para pequenos negócios crescerem.</tspan></text>
+  <rect x="78" y="940" width="924" height="210" rx="28" fill="#334155" stroke="#F4B942" stroke-opacity=".30"/>
+  <text x="126" y="1008" fill="#FFFFFF" font-family="Manrope,Arial,sans-serif" font-size="29" font-weight="800">Ideias conectadas. Resultados reais.</text>
+  <text x="126" y="1058" fill="#F4B942" font-family="DM Sans,Arial,sans-serif" font-size="24">Design, tecnologia e estratégia em um só lugar.</text>
+  <text x="126" y="1110" fill="#F4B942" font-family="DM Sans,Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">É SÓ O COMEÇO.</text>
+  <path d="M0 1264 C190 1208 328 1312 518 1260 C706 1208 842 1194 1080 1230" fill="none" stroke="url(#mosaicB)" stroke-width="7"/>
+  <path d="M0 1284 C190 1228 328 1332 518 1280 C706 1228 842 1214 1080 1250" fill="none" stroke="#F4B942" stroke-width="2" opacity=".26"/>
+</svg>

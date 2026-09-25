@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">Template de post da Nuvio - identidade Mosaico</title>
+  <desc id="desc">Modelo editável de post para Instagram com áreas de título, texto e chamada.</desc>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4B942"/><stop offset=".52" stop-color="#F4B942"/><stop offset="1" stop-color="#F4B942"/></linearGradient></defs>
+  <rect width="1080" height="1350" fill="#F8FAFC"/>
+  <rect x="0" y="0" width="1080" height="28" fill="url(#g)"/>
+  <g transform="translate(78 78) scale(.38)"><rect x="0" y="0" width="82" height="82" rx="20" fill="url(#g)"/><rect x="98" y="0" width="82" height="82" rx="20" fill="#334155" stroke="#F4B942" stroke-width="5"/><rect x="0" y="98" width="82" height="82" rx="20" fill="#334155" stroke="#F4B942" stroke-width="5"/><rect x="98" y="98" width="82" height="82" rx="20" fill="url(#g)"/><path d="M41 41h98v98H41Z" fill="#F8FAFC" transform="rotate(45 90 90)"/></g>
+  <text x="178" y="122" fill="#1E293B" font-family="Manrope,Arial,sans-serif" font-size="43" font-weight="800">nuvio</text>
+  <circle cx="900" cy="210" r="145" fill="#F8FAFC"/><circle cx="900" cy="210" r="86" fill="#D1D5DB"/>
+  <text x="78" y="410" fill="#1E293B" font-family="Manrope,Arial,sans-serif" font-size="76" font-weight="800">Título principal</text>
+  <text x="78" y="510" fill="url(#g)" font-family="Manrope,Arial,sans-serif" font-size="76" font-weight="800">em destaque.</text>
+  <text x="78" y="650" fill="#334155" font-family="DM Sans,Arial,sans-serif" font-size="30"><tspan x="78">Escreva aqui uma mensagem objetiva,</tspan><tspan x="78" dy="45">útil e fácil de compreender.</tspan></text>
+  <rect x="78" y="890" width="924" height="210" rx="28" fill="#1E293B"/>
+  <rect x="78" y="890" width="10" height="210" rx="5" fill="url(#g)"/>
+  <text x="126" y="966" fill="#FFFFFF" font-family="Manrope,Arial,sans-serif" font-size="28" font-weight="800">Chamada para ação</text>
+  <text x="126" y="1014" fill="#F4B942" font-family="DM Sans,Arial,sans-serif" font-size="24">Inclua uma frase curta e direcionada.</text>
+  <rect x="126" y="1040" width="210" height="36" rx="18" fill="#FFFFFF"/><text x="231" y="1065" fill="#1E293B" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="16" font-weight="700">SAIBA MAIS</text>
+  <path d="M0 1260 C190 1205 328 1305 518 1258 C706 1211 842 1195 1080 1228" fill="none" stroke="url(#g)" stroke-width="7"/>
+</svg>

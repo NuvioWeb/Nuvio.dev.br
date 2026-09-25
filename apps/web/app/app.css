@@ -1,0 +1,439 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Calendário de Balcão — Mosaico (Azul-ardósia + Dourado) */
+:root {
+  --nuvio-ink: #1e293b;
+  --nuvio-ink-2: #334155;
+  --nuvio-gold: #f4b942;
+  --nuvio-highlight: #f4b942;
+  --nuvio-slate: #334155;
+  --nuvio-cloud: #f8fafc;
+  --nuvio-line: #d1d5db;
+  --nuvio-pad: #ffffff;
+  --nuvio-gradient: linear-gradient(135deg, #f4b942 0%, #334155 52%, #f4b942 100%);
+  --nuvio-radius-sm: 8px;
+  --nuvio-radius-md: 12px;
+  --nuvio-radius-lg: 16px;
+  --nuvio-shadow-card: 0 18px 45px rgba(30, 41, 59, 0.14);
+  --nuvio-shadow-soft: 0 4px 14px rgba(30, 41, 59, 0.06);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+  --primary: #f4b942;
+  --primary-foreground: #1e293b;
+  --secondary: #e8eef4;
+  --secondary-foreground: #1e293b;
+  --muted: #e8eef4;
+  --muted-foreground: #546070;
+  --accent: #f4b942;
+  --accent-foreground: #1e293b;
+  --destructive: #dc2626;
+  --border: #d1d5db;
+  --input: #d1d5db;
+  --ring: #f4b942;
+  --radius: 0.75rem;
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+.dark {
+  --background: #0a0f18;
+  --foreground: #eef1f5;
+  --card: #151c28;
+  --card-foreground: #eef1f5;
+  --popover: #151c28;
+  --popover-foreground: #eef1f5;
+  --primary: #f4b942;
+  --primary-foreground: #1e293b;
+  --secondary: #1a2332;
+  --secondary-foreground: #eef1f5;
+  --muted: #121925;
+  --muted-foreground: #9aa6b5;
+  --accent: #f4b942;
+  --accent-foreground: #1e293b;
+  --destructive: #f87171;
+  --border: #2a3648;
+  --input: #2a3648;
+  --ring: #f4b942;
+  --nuvio-cloud: #0a0f18;
+  --nuvio-pad: #243044;
+  --nuvio-line: #2a3648;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: var(--nuvio-radius-sm);
+  --radius-md: var(--nuvio-radius-md);
+  --radius-lg: var(--nuvio-radius-lg);
+  --radius-xl: calc(var(--nuvio-radius-lg) + 4px);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--nuvio-gold) 55%, transparent);
+    color: var(--nuvio-ink);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--nuvio-ink) 28%, transparent);
+    border-radius: 6px;
+    border: 2px solid var(--background);
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, white 22%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    @apply font-extrabold tracking-tight text-balance;
+  }
+
+  a {
+    @apply cursor-pointer underline-offset-4;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+@layer utilities {
+  .brand-surface {
+    isolation: isolate;
+    background-color: var(--background);
+    background-image:
+      radial-gradient(
+        85% 50% at 50% -12%,
+        color-mix(in oklab, var(--nuvio-gold) 9%, transparent),
+        transparent 55%
+      ),
+      linear-gradient(
+        180deg,
+        color-mix(in oklab, var(--background) 88%, white) 0%,
+        var(--background) 40%,
+        color-mix(in oklab, var(--background) 94%, var(--nuvio-ink)) 100%
+      );
+  }
+
+  .dark .brand-surface {
+    background-image:
+      radial-gradient(
+        70% 40% at 50% -8%,
+        color-mix(in oklab, var(--nuvio-gold) 6%, transparent),
+        transparent 50%
+      ),
+      linear-gradient(180deg, #0d1420 0%, var(--background) 45%, #070b12 100%);
+  }
+
+  /* Objeto calendário completo */
+  .calendar-board {
+    overflow: hidden;
+    border-radius: var(--nuvio-radius-lg);
+    border: 1px solid color-mix(in oklab, var(--nuvio-ink) 18%, transparent);
+    box-shadow:
+      0 18px 40px rgba(30, 41, 59, 0.12),
+      inset 0 1px 0 color-mix(in oklab, white 40%, transparent);
+  }
+
+  .dark .calendar-board {
+    border-color: color-mix(in oklab, white 12%, transparent);
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 color-mix(in oklab, white 6%, transparent);
+  }
+
+  .calendar-plate {
+    background:
+      radial-gradient(
+        90% 80% at 70% 20%,
+        color-mix(in oklab, var(--nuvio-gold) 16%, transparent),
+        transparent 55%
+      ),
+      linear-gradient(155deg, #2a3648 0%, var(--nuvio-ink) 48%, #162032 100%);
+    color: #f7f8fa;
+  }
+
+  .dark .calendar-plate {
+    background:
+      radial-gradient(
+        80% 70% at 70% 15%,
+        color-mix(in oklab, var(--nuvio-gold) 12%, transparent),
+        transparent 50%
+      ),
+      linear-gradient(155deg, #1a2434 0%, #121a26 100%);
+  }
+
+  .calendar-fillet {
+    height: 3px;
+    background: var(--nuvio-gold);
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--nuvio-gold) 30%, transparent);
+  }
+
+  .calendar-pad {
+    background: var(--nuvio-pad);
+    color: var(--foreground);
+  }
+
+  .dark .calendar-pad {
+    background: #243044;
+    color: #eef1f5;
+  }
+
+  .merchant-line {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--nuvio-gold);
+  }
+
+  .pad-row {
+    border-bottom: 1px solid var(--border);
+    transition: background-color 180ms var(--ease-out);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .pad-row:hover {
+      background: color-mix(in oklab, var(--nuvio-gold) 8%, transparent);
+    }
+  }
+
+  .pad-cell {
+    border: 1px solid var(--border);
+    background: var(--nuvio-pad);
+    border-radius: var(--nuvio-radius-sm);
+    transition:
+      border-color 180ms var(--ease-out),
+      transform 160ms var(--ease-out),
+      background-color 180ms var(--ease-out);
+  }
+
+  .dark .pad-cell {
+    background: #2c3a4e;
+    border-color: color-mix(in oklab, white 12%, transparent);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .pad-cell:hover {
+      border-color: color-mix(in oklab, var(--nuvio-gold) 55%, var(--border));
+      transform: translateY(-1px);
+    }
+  }
+
+  .fillet-rule {
+    height: 2px;
+    width: 100%;
+    max-width: 6rem;
+    background: var(--nuvio-gold);
+    transform-origin: left center;
+  }
+
+  .reveal-in .fillet-rule,
+  .fillet-rule.is-in {
+    animation: fillet-draw 520ms var(--ease-out) both;
+  }
+
+  @keyframes fillet-draw {
+    from {
+      transform: scaleX(0);
+      opacity: 0.4;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  .fade-up {
+    animation: fade-up 600ms var(--ease-out) both;
+  }
+
+  .fade-up-delay-1 {
+    animation-delay: 55ms;
+  }
+
+  .fade-up-delay-2 {
+    animation-delay: 110ms;
+  }
+
+  .fade-up-delay-3 {
+    animation-delay: 165ms;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 480ms var(--ease-out),
+      transform 480ms var(--ease-out);
+    will-change: opacity, transform;
+  }
+
+  .reveal-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .page-main {
+    view-transition-name: page-main;
+  }
+
+  .site-header {
+    view-transition-name: site-header;
+  }
+
+  .site-footer {
+    view-transition-name: site-footer;
+  }
+
+  .page-fallback-enter {
+    animation: page-in 360ms var(--ease-out) both;
+  }
+
+  @keyframes page-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes page-out {
+    to {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up,
+    .fade-up-delay-1,
+    .fade-up-delay-2,
+    .fade-up-delay-3,
+    .page-fallback-enter,
+    .fillet-rule {
+      animation: none;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+@supports (view-transition-name: none) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+
+  ::view-transition-group(site-header),
+  ::view-transition-group(site-footer) {
+    animation-duration: 0s;
+  }
+
+  ::view-transition-old(page-main) {
+    animation: page-out 240ms var(--ease-out) both;
+  }
+
+  ::view-transition-new(page-main) {
+    animation: page-in 360ms var(--ease-out) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none !important;
+    }
+  }
+}

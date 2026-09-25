@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">Nuvio - logo negativa Mosaico</title>
+  <desc id="desc">Logo negativa com fundo transparente — Azul-ardósia + Dourado.</desc>
+  <defs>
+    <mask id="mosaicCutNeg">
+      <rect width="180" height="180" fill="#fff"/>
+      <path d="M41 41h98v98H41Z" fill="#000" transform="rotate(45 90 90)"/>
+    </mask>
+  </defs>
+  <g transform="translate(24 20)" mask="url(#mosaicCutNeg)">
+    <rect x="0" y="0" width="82" height="82" rx="20" fill="#F4B942"/>
+    <rect x="98" y="0" width="82" height="82" rx="20" fill="#334155" stroke="#F4B942" stroke-width="5"/>
+    <rect x="0" y="98" width="82" height="82" rx="20" fill="#334155" stroke="#F4B942" stroke-width="5"/>
+    <rect x="98" y="98" width="82" height="82" rx="20" fill="#F4B942"/>
+  </g>
+  <text x="270" y="145" fill="#FFFFFF" font-family="Manrope,Arial,sans-serif" font-size="104" font-weight="800" letter-spacing="-5">nuvio</text>
+</svg>

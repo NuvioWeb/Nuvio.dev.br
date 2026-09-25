@@ -1,0 +1,13 @@
+# Railway — serviço da API Nuvio (monorepo npm workspaces)
+# Root Directory no painel: deixe em branco (raiz do repo)
+
+[build]
+builder = "NIXPACKS"
+buildCommand = "npm install --include=dev && npm run build -w @nuvio/contracts && npm run build -w @nuvio/api"
+
+[deploy]
+startCommand = "node apps/api/dist/main.js"
+healthcheckPath = "/health/live"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3

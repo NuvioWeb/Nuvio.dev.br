@@ -1,0 +1,26 @@
+:root {
+  --nuvio-ink: #1E293B;
+  --nuvio-ink-2: #334155;
+  --nuvio-gold: #F4B942;
+  --nuvio-highlight: #F4B942;
+  --nuvio-slate: #334155;
+  --nuvio-cloud: #F8FAFC;
+  --nuvio-line: #D1D5DB;
+  --nuvio-gradient: linear-gradient(135deg, #F4B942 0%, #334155 52%, #F4B942 100%);
+  --nuvio-radius-sm: 12px;
+  --nuvio-radius-md: 20px;
+  --nuvio-radius-lg: 28px;
+  --nuvio-shadow-card: 0 18px 45px rgba(30, 41, 59, .14);
+}
+
+/* Identidade Mosaico: quatro blocos, um espaço negativo central e composição modular. */
+body { font-family: "DM Sans", system-ui, sans-serif; color: var(--nuvio-ink); background: var(--nuvio-cloud); }
+h1, h2, h3, h4, .brand-name, .button { font-family: "Manrope", system-ui, sans-serif; }
+.brand-gradient { background: var(--nuvio-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.brand-button { background: var(--nuvio-gold); color: var(--nuvio-ink); border-radius: var(--nuvio-radius-sm); padding: 12px 12px; font-weight: 700; }
+.brand-button:hover { background: var(--nuvio-highlight); color: var(--nuvio-ink); }
+.dark-surface { background: var(--nuvio-ink); color: #fff; }
+.dark-surface-muted { background: var(--nuvio-ink-2); color: var(--nuvio-highlight); }
+.mosaic-surface { background: var(--nuvio-ink); border-radius: var(--nuvio-radius-lg); }
+.mosaic-card { background: #fff; border: 1px solid var(--nuvio-line); border-radius: var(--nuvio-radius-lg); box-shadow: var(--nuvio-shadow-card); }
+.mosaic-gradient { background: var(--nuvio-gradient); }
