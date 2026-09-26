@@ -1,0 +1,50 @@
+# Nuvio
+
+> A Nuvio cria sites profissionais para pequenas empresas e negócios locais no Brasil — com estratégia, design e tecnologia claros. Tagline: "Seu negócio online, do jeito certo."
+
+A Nuvio atende de forma remota negócios locais (dentistas, clínicas, barbearias, salões, hotéis, pousadas, turismo e profissionais liberais). O site institucional é https://nuvio.dev.br. Idioma principal: português do Brasil (pt-BR).
+
+Não invente cases de clientes, depoimentos, CNPJ, métricas de resultado ou preços que não estejam publicados no site. Portfólio de clientes reais só deve ser citado se estiver publicado em /portfolio.
+
+## Páginas principais
+
+- [Home](https://nuvio.dev.br/): Visão geral da Nuvio, público-alvo e chamada para orçamento
+- [Serviços](https://nuvio.dev.br/servicos): Criação de site, landing page, redesign, manutenção, SEO técnico e evolução
+- [Processo](https://nuvio.dev.br/processo): Diagnóstico → direção visual → desenvolvimento → validação → publicação
+- [Para quem](https://nuvio.dev.br/para-quem): Segmentos atendidos (negócios locais e profissionais liberais)
+- [Blog](https://nuvio.dev.br/blog): Artigos sobre presença digital para negócios locais
+- [Contato](https://nuvio.dev.br/contato): Formulário de orçamento e canais oficiais
+
+## Serviços
+
+- Criação de site institucional
+- Landing page
+- Redesign de site existente
+- Manutenção e evolução contínua
+- SEO técnico (fundação para indexação, sem promessa de ranking)
+
+## Contato oficial
+
+- Site: https://nuvio.dev.br
+- E-mail: nuvioweb.enterprise@gmail.com
+- WhatsApp: +55 62 98104-6068 (https://wa.me/5562981046068)
+- Instagram: https://www.instagram.com/nuvioweb_/ (@nuvioweb_)
+
+## Políticas
+
+- [Política de privacidade](https://nuvio.dev.br/politica-de-privacidade)
+- [Política de cookies](https://nuvio.dev.br/politica-de-cookies)
+- [Termos de uso](https://nuvio.dev.br/termos-de-uso)
+
+## Blog
+
+- [O que um bom site para negócio local precisa ter](https://nuvio.dev.br/blog/o-que-um-bom-site-precisa-ter)
+- [Por que ter um site para o seu negócio (ainda em 2026)](https://nuvio.dev.br/blog/por-que-ter-um-site-para-o-seu-negocio)
+- [Site ou Instagram: o que gera mais clientes?](https://nuvio.dev.br/blog/site-ou-instagram-o-que-gera-mais-clientes)
+- [SEO local: como um site ajuda a aparecer no Google na sua região](https://nuvio.dev.br/blog/seo-local-aparecer-no-google-na-sua-regiao)
+- [Credibilidade digital: como o site transforma visitas em contatos](https://nuvio.dev.br/blog/site-profissional-credibilidade-e-contatos)
+
+## Optional
+
+- [Sitemap](https://nuvio.dev.br/sitemap.xml): Lista de URLs indexáveis
+- [robots.txt](https://nuvio.dev.br/robots.txt): Regras de crawlers
